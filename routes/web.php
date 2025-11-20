@@ -1,11 +1,19 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ModelController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// use Illuminate\Support\Facades\Route;
 
-Route::get('/model-view', function () {
-    return view('model-viewer');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/red-view', function () {
+//     return view('red-viewer');
+// });
+
+// Route::get('/yellow-view', function () {
+//     return view('yellow-viewer');
+// });
+
+Route::get('/model-view', [ModelController::class, 'view']);
